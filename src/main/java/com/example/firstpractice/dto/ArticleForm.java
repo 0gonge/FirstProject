@@ -7,6 +7,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class ArticleForm {
+    private Long id;
     private String title;
     private String contents;
 
@@ -14,6 +15,7 @@ public class ArticleForm {
     //데이터를 잘 받았는지 확인 : toString()생성자
 
     public Article toEntity() {
-        return new Article(null, title, contents);
+
+        return new Article(id, title, contents);
     }
 }
